@@ -1,0 +1,12 @@
+.hero-acorns {
+  position: absolute;
+  left: 10%;
+  top: 100px;
+  width: 256px;
+}
+.hero-leaf {
+  position: absolute;
+  right: 10%;
+  top: 100px;
+  width: 256px;
+}
