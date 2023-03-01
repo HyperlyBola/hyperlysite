@@ -34,6 +34,16 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.bg-midi {
+    background: #fffbea;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg-wav {
+    background-color: #fffbea;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 a.bg-blue:hover,
 a.bg-blue:focus,
@@ -1612,11 +1622,11 @@ button.section-black:focus {
 }
 
 .navbar {
-    height: 48px;
+    height: 38px;
     background: #c5e3b6;
     padding-left: 4px;
     padding-right: 4px;
-    border-bottom: 2px solid #FCFCFC;
+    border-bottom: 2px solid #eeffe5;
 }
 
 .navbar-secondary {
@@ -1631,24 +1641,50 @@ button.section-black:focus {
     position: relative;
 }
 
+.navbar-footer p {
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .navbar-main .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar .navbar-nav .nav-link {
     position: relative;
-    font-size: 1rem;
+    font-size: .65rem;
     color: black;
     text-transform: normal;
     background: #c5e3b6; 
     letter-spacing: 0;
     font-weight: 400;
-    padding: 2px 12px;
+    padding: 4px 10px;
 }
 
 .navbar .navbar-nav .current-link .nav-link {
     background: #edf6e8;
+    border-top: 1px solid #08080E;
+    border-left: 1px solid #08080E;
+    border-right: 1px solid #FCFCFC;
+    border-bottom: 1px solid #FCFCFC;
 }
+
+.navbar .navbar-nav .current-link .dropdown .nav-link {
+    background: #edf6e8;
+    border-top: 1px solid #08080E;
+    border-left: 1px solid #08080E;
+    border-right: 1px solid #FCFCFC;
+    border-bottom: 1px solid #FCFCFC;
+}
+.navbar .navbar-nav .current-link .dropdown-menu .nav-link {
+    background: #c5e3b6;
+    border-top: 1px solid #08080E;
+    border-left: 1px solid #08080E;
+    border-right: 1px solid #FCFCFC;
+    border-bottom: 1px solid #FCFCFC;
+}
+
 
 .navbar .navbar-nav .nav-link .icon {
     position: absolute;
@@ -1665,7 +1701,7 @@ button.section-black:focus {
 }
 
 .navbar .time {
-    font-size: 1rem;
+    font-size: .65rem;
     border-top: 1px solid #08080E;
     border-left: 1px solid #08080E;
     border-right: 1px solid #FCFCFC;
@@ -1793,10 +1829,11 @@ button.section-black:focus {
         margin-right: 0;
     }
     .navbar-nav .dropdown-menu {
+        background:#c5e3b6;
         opacity: 0;
         pointer-events: none;
         margin: 0;
-        border-radius: 0.2rem;
+        border-radius: 0rem;
     }
     .navbar-nav .dropdown-menu-right:before {
         right: 20px;
@@ -1919,7 +1956,22 @@ button.section-black:focus {
         animation: hide-navbar-collapse .2s ease forwards;
     }
 }
-
+@media (min-width: 320px) {
+    .nav-link img {
+        display: none;
+    }
+    .time {
+        display: none;
+    }
+}
+@media (min-width: 576px) {
+    .nav-link img {
+        display: inline-block;
+    }
+    .time {
+        display: inline-block;
+    }
+}
 
 /**
  * = Sections
@@ -1927,7 +1979,7 @@ button.section-black:focus {
 
 .section {
     position: relative;
-    padding-top: 5rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
 }
 
@@ -3828,11 +3880,12 @@ button.section-black:focus {
  */
 
 .dropdown-menu {
-    min-width: 12rem;
+    min-width: 8rem;
 }
 
 .dropdown-menu .dropdown-header,
 .dropdown-menu .dropdown-item {
+    height: 1.75rem;
     padding: .5rem 1rem;
     font-size: 0.875rem;
 }
@@ -7734,57 +7787,3 @@ a:hover,
     max-width: 400px !important;
 }
 
-.music {
-    padding: 2px;
-    margin-left: auto;
-    text-align: right;
-}
-
-.really-player { 
-    position: relative; 
-    display: inline-block; 
-    font-family: 'Arial', Arial, sans-serif; 
-    height: 40px; 
-    width: 40px; 
-    max-width: 100%; 
-}
-
-.really-player audio { 
-    display: none; 
-}
-
-.really-player .play-button { 
-    position: absolute; 
-    left: 0px;
-    top: 2px; 
-    color: black; 
-    height: 40px; 
-    width: 40px; 
-    content: url(../img/sound-off.png);
-}
-
-.really-player .play-button::before { 
-    position: absolute; 
-    pointer-events: none; 
-    font-size: 24px;
-}
-
-.really-player .play-button:hover { 
-    cursor: pointer; 
-}
-
-.really-player .play-button:active
-
-.really-player.playing .play-button {
-    content: url("../img/sound-on.png");
-}
-
-.really-player.playing .play-button {
-    content: url("../img/sound-on.png");
-}
-
-.native-hidden {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}

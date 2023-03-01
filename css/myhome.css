@@ -1,12 +1,143 @@
 .hero-acorns {
   position: absolute;
-  left: 10%;
-  top: 100px;
-  width: 256px;
+  left: 20%;
+  top: 124px;
+  width: 144px;
 }
 .hero-leaf {
   position: absolute;
-  right: 10%;
-  top: 100px;
-  width: 256px;
+  right: 20%;
+  top: 124px;
+  width: 144x;
+}
+.nyan-cat {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 120px;
+}
+.under-construction {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.doggy-gif1 {
+  margin-right: auto;
+  margin-left: auto;
+  width: 124px;
+}
+.sonic-rush {
+  margin-right: auto;
+  margin-left: auto;
+  width: 240px;
+}
+
+
+@media (min-width: 320px) {
+  .hero-acorns {
+    left: 2%;
+    top: 140px;
+    width: 128px;
+  }
+  .hero-leaf {
+    right: 2%;
+    top: 140px;
+    width: 128px;
+  }
+}
+@media (min-width: 576px) {
+  .hero-acorns {
+    left: 8%;
+    top: 140px;
+    width: 144px;
+  }
+  .hero-leaf {
+    right: 8%;
+    top: 140px;
+    width: 144px;
+  }
+  .sonic-rush {
+    width: 90%
+  }
+}
+@media (min-width: 992px) {
+  .hero-acorns {
+    left: 16%;
+    top: 124px;
+  }
+  .hero-leaf {
+    right: 16%;
+    top: 124px;
+  }
+  .sonic-rush {
+    width: 240px;
+  }
+}
+
+span.nowrap a {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/** Music **/
+.music {
+  padding: 2px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.really-player { 
+  position: relative; 
+  display: inline-block; 
+  font-family: 'Arial', Arial, sans-serif; 
+  height: 40px; 
+  width: 40px; 
+  max-width: 100%; 
+}
+
+.really-player audio { 
+  display: none; 
+}
+
+.really-player .play-button { 
+  position: absolute; 
+  left: 8px;
+  top: 6px; 
+  color: black; 
+  height: 30px; 
+  width: 30px; 
+  image-rendering: pixelated;
+  content: url(../img/sound-off.png);
+}
+
+.really-player .play-button::before { 
+  position: absolute; 
+  pointer-events: none; 
+  font-size: 24px;
+}
+
+.really-player .play-button:hover { 
+  cursor: pointer; 
+}
+
+.really-player .play-button:active
+
+.really-player.playing .play-button {
+  content: url("../img/sound-on.png");
+}
+
+.really-player.playing .play-button {
+  content: url("../img/sound-on.png");
+}
+
+.native-hidden {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
