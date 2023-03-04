@@ -31,6 +31,21 @@
   margin-left: auto;
   width: 240px;
 }
+.pm-foreverforest {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+.club-penguin {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+.eden-fur {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 
 @media (min-width: 320px) {

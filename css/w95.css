@@ -12,6 +12,8 @@
 
  body {
     background-color: #e6ddaa;
+    background-image: url("https://files.1-background.com/images/stars-1/beautiful-blue-stars-fill.jpg");
+    background-repeat: repeat;
  }
 
 .bg-primary {
@@ -20,6 +22,8 @@
 
 .bg-secondary {
     background-color: #e6ddaa !important;
+    background-image: url("https://files.1-background.com/images/stars-1/beautiful-blue-stars-fill.jpg");
+    background-repeat: repeat;
 }
 
 .bg-tertiary {
@@ -30,9 +34,10 @@
     background-color: #5e72e4 !important;
 }
 .bg-hero {
-    background-image: url("https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2018/09/918/516/hallaskoart3.jpg?ve=1&tl=1");
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/a2cbce8b-086a-4a4b-86fa-97085e49c9c3/d2grk4v-5348465b-d912-4744-a253-6f8801c26ef7.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: 50%;
 }
 .bg-midi {
     background: #fffbea;
@@ -1894,11 +1899,51 @@ button.section-black:focus {
         padding: .625rem 0;
     }
     .navbar-nav .dropdown-menu {
-        box-shadow: none;
-        min-width: auto;
+        background:#c5e3b6;
+        opacity: 0;
+        pointer-events: none;
+        margin: 0;
+        border-radius: 0rem;
+        min-width: 100%;
     }
-    .navbar-nav .dropdown-menu .media svg {
-        width: 30px;
+    .navbar-nav .dropdown-menu-right:before {
+        right: 20px;
+        left: auto;
+    }
+    .navbar-nav .dropdown-menu.show {
+        opacity: 1;
+        pointer-events: auto;
+        animation: show-navbar-dropdown .25s ease forwards;
+    }
+    .navbar-nav .dropdown-menu.close {
+        display: block;
+        animation: hide-navbar-dropdown .15s ease backwards;
+    }
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.2s ease;
+    }
+    .navbar-nav .dropdown:hover>.dropdown-menu,
+    .navbar-nav .dropdown-submenu:hover>.dropdown-menu {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(0, -7px);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .navbar-nav .dropdown:hover .nav-link>.nav-link-arrow {
+        transform: rotate(180deg);
+    }
+    .navbar-nav .dropdown-submenu:hover .dropdown-item>.nav-link-arrow {
+        transform: rotate(90deg);
+    }
+    .navbar-nav .dropdown-menu-inner {
+        position: relative;
+        padding: 1rem;
     }
     .navbar-collapse {
         width: 100%;
@@ -1938,12 +1983,6 @@ button.section-black:focus {
     .navbar-collapse .collapse-close {
         text-align: right;
     }
-    .dropdown.show .nav-link>.nav-link-arrow {
-        transform: rotate(180deg);
-    }
-    .dropdown-submenu.show .dropdown-item>.nav-link-arrow {
-        transform: rotate(90deg);
-    }
     .navbar-collapse.collapsing,
     .navbar-collapse.show {
         padding: 1.5rem;
@@ -1957,6 +1996,9 @@ button.section-black:focus {
     }
 }
 @media (min-width: 320px) {
+    .navbar {
+        height: 42px;
+    }
     .nav-link img {
         display: none;
     }
@@ -3880,7 +3922,7 @@ button.section-black:focus {
  */
 
 .dropdown-menu {
-    min-width: 8rem;
+    min-width: calc(100% + 2rem);
 }
 
 .dropdown-menu .dropdown-header,
